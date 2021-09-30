@@ -1,0 +1,8 @@
+<p>header works!</p>
+<ng-container *ngFor="let item of model">
+  <app-header-item [name]="item.name" [url]="item.path" [children]="item.children">
+  </app-header-item>
+  <div *ngFor="let subitem of item.children" class="line">
+    <span>-----</span><app-header-item [name]="subitem.name" [url]="subitem.path"></app-header-item>
+  </div>
+</ng-container>

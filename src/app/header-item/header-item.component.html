@@ -1,0 +1,4 @@
+<div [ngClass]="{ 'highlight': (isHighlighted$ | async), 'childHighlight': (isChildHighlighted$ | async) } ">
+  <a [routerLink]="url">{{ name }}</a>
+</div>
+{{ logDetectionChange()  }}
